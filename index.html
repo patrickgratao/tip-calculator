@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
     />
-    <title>Frontend Mentor | Tip calculator app</title>
+    <title>Patryck Gratão | Tip calculator app</title>
     <link rel="stylesheet" href="./assets/styles/reset.css" />
     <link rel="stylesheet" href="./assets/styles/style.css" />
 
@@ -23,9 +23,9 @@
       type="image/x-icon"
     />
 
-    <script type="text/javascript" src="./js/calculate.js"></script>
+    <script type="text/javascript" src="./js/functions.js"></script>
   </head>
-  <body>
+  <body onload="resetValues()">
     <main class="container">
       <div class="logo">
         <img src="./assets/images/logo.svg" alt="Logo Tip Calculator" />
@@ -34,20 +34,52 @@
         <section class="inputs">
           <div class="input-container">
             <span class="label">Bill</span>
-            <input type="text" id="billInput" value="0" />
+            <input type="number" id="billInput" value="0" pattern="\d*" />
           </div>
 
           <div class="input-container">
             <span class="label">Select Tip %</span>
             <div class="buttons-container">
-              <button class="normal-tip" onclick="calculate(5)">5%</button>
-              <button class="normal-tip" onclick="calculate(10)">10%</button>
-              <button class="normal-tip button-active" onclick="calculate(15)">
+              <button
+                class="normal-tip"
+                onclick="calculate(5, 'fivePercent')"
+                id="fivePercent"
+              >
+                5%
+              </button>
+              <button
+                class="normal-tip"
+                onclick="calculate(10, 'tenPercent')"
+                id="tenPercent"
+              >
+                10%
+              </button>
+              <button
+                class="normal-tip button-active"
+                onclick="calculate(15, 'fifteenPercent')"
+                id="fifteenPercent"
+              >
                 15%
               </button>
-              <button class="normal-tip" onclick="calculate(25)">25%</button>
-              <button class="normal-tip" onclick="calculate(30)">50%</button>
-              <button class="custom-tip" onclick="calculate(100)">
+              <button
+                class="normal-tip"
+                onclick="calculate(25, 'twentyFivePercent')"
+                id="twentyFivePercent"
+              >
+                25%
+              </button>
+              <button
+                class="normal-tip"
+                onclick="calculate(30, 'fifityPercent')"
+                id="fifityPercent"
+              >
+                50%
+              </button>
+              <button
+                class="custom-tip"
+                onclick="calculate(100, 'oneHundredPercent')"
+                id="oneHundredPercent"
+              >
                 Custom
               </button>
             </div>
@@ -55,7 +87,12 @@
 
           <div class="input-container">
             <span class="label">Number of People</span>
-            <input type="text" id="numberOfPeopleInput" value="0" />
+            <input
+              type="number"
+              id="numberOfPeopleInput"
+              value="0"
+              pattern="\d*"
+            />
           </div>
         </section>
 
