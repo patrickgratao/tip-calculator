@@ -164,4 +164,8 @@ button.button-active {
   .main-content-container {
     grid-template-columns: 1fr;
   }
+
+  section.inputs {
+    width: 80vw;
+  }
 }
