@@ -3,7 +3,7 @@
 }
 body {
   background-color: hsl(185, 41%, 84%);
-  font-size: 24px;
+  font-size: 16px;
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -26,13 +26,15 @@ main.container {
   gap: 35px;
 }
 
+/* FIRST BLOCK */
+
 span.label {
   font-size: 12px;
   font-weight: 700;
   color: hsl(186, 14%, 43%);
 }
 
-.inputs {
+section.inputs {
   display: flex;
   flex-direction: column;
   gap: 34px;
@@ -52,12 +54,12 @@ input {
   border: none;
   outline: none;
 
-  background-position: 15px 10px;
+  background-position: 19px 17px;
   background-repeat: no-repeat;
 
   text-align: right;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 24px;
   color: hsl(183, 100%, 15%);
 }
 
@@ -75,13 +77,14 @@ input#number-of-people-input {
   gap: 10px;
 }
 
-.buttons-container button {
+button {
   width: 100%;
   height: 37px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   font-weight: 700;
+  font-size: 16px;
 }
 
 button.normal-tip {
@@ -91,4 +94,66 @@ button.normal-tip {
 
 button.custom-tip {
   color: hsl(186, 14%, 43%);
+}
+
+/* SECOND BLOCK */
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 42px 30px 30px 30px;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 10px;
+}
+
+.result-container:nth-child(2) {
+  margin-top: 2.3rem;
+}
+
+.result-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-container .headings {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.result-container .headings .heading-1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 1px;
+}
+
+.result-container .headings .heading-2 {
+  color: hsl(184, 14%, 56%);
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.result-container .value {
+  color: hsl(172, 67%, 45%);
+  font-weight: 700;
+  font-size: 30px;
+}
+
+button.button-reset {
+  text-transform: uppercase;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+  margin-top: 8rem;
+}
+
+/* SPECIAL CASES */
+button.button-active {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
 }
