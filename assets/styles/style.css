@@ -113,7 +113,7 @@ button.custom-tip {
 .result-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .result-container .headings {
@@ -157,9 +157,10 @@ button.button-active {
   color: hsl(183, 100%, 15%);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 767px) {
   main.container {
     gap: 34px;
+    margin-top: 2rem;
   }
   .main-content-container {
     grid-template-columns: 1fr;
@@ -167,5 +168,9 @@ button.button-active {
 
   section.inputs {
     width: 80vw;
+  }
+
+  .result-container .value {
+    font-size: 20px;
   }
 }
