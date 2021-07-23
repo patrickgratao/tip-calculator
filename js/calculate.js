@@ -15,13 +15,16 @@ const calculate = (percentage) => {
 
   document.getElementById('totalPerPerson').textContent = `$${totalPerPerson?.toFixed(2)}`
   document.getElementById('tipAmountPerPerson').textContent = `$${tipAmountPerPerson?.toFixed(2)}`
+  document.getElementById('buttonReset').removeAttribute("disabled", "disabled");
 }
 
 const resetValues = () => {
   document.getElementById("billInput").value = 0;
   document.getElementById("numberOfPeopleInput").value = 0;
-  document.getElementById('totalPerPerson').textContent = `$0.00`
-  document.getElementById('tipAmountPerPerson').textContent = `$0.00`
+  document.getElementById('totalPerPerson').textContent = `$0.00`;
+  document.getElementById('tipAmountPerPerson').textContent = `$0.00`;
+
+  document.getElementById('buttonReset').setAttribute("disabled", "disabled");
 }
 
 

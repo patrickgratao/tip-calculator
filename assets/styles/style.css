@@ -157,6 +157,11 @@ button.button-active {
   color: hsl(183, 100%, 15%);
 }
 
+button[disabled] {
+  background-color: hsl(183, 78%, 23%);
+  cursor: not-allowed;
+}
+
 @media screen and (max-width: 767px) {
   main.container {
     gap: 34px;

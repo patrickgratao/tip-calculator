@@ -34,7 +34,7 @@
         <section class="inputs">
           <div class="input-container">
             <span class="label">Bill</span>
-            <input type="number" id="billInput" value="0" />
+            <input type="text" id="billInput" value="0" />
           </div>
 
           <div class="input-container">
@@ -55,7 +55,7 @@
 
           <div class="input-container">
             <span class="label">Number of People</span>
-            <input type="number" id="numberOfPeopleInput" value="0" />
+            <input type="text" id="numberOfPeopleInput" value="0" />
           </div>
         </section>
 
@@ -78,7 +78,9 @@
             <div class="value" id="totalPerPerson">$32.79</div>
           </div>
 
-          <button class="button-reset" onclick="resetValues()">Reset</button>
+          <button class="button-reset" onclick="resetValues()" id="buttonReset">
+            Reset
+          </button>
         </section>
       </section>
     </main>
