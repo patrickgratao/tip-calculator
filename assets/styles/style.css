@@ -2,4 +2,61 @@ body {
   background-color: hsl(185, 41%, 84%);
   font-family: "Space Mono", monospace;
   font-size: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+main.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 67px;
+  margin-top: 100px;
+}
+
+.main-content-container {
+  width: 50%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  padding: 34px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+
+span.label {
+  font-size: 12px;
+  font-weight: 700;
+  color: hsl(186, 14%, 43%);
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.bill-input {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: hsl(189, 14%, 91%);
+  border: none;
+  outline: none;
+
+  background-image: url(../images/icon-dollar.svg);
+  background-position: 15px 10px;
+  background-repeat: no-repeat;
+
+  text-align: right;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Space Mono";
+  color: hsl(183, 100%, 15%);
 }
